@@ -1,6 +1,8 @@
 # arduino_barcode128
 Generates a String representation of a Barcode (code 128)
 
+
+
 ## Example of use
 
     #include <Barcode.h>
@@ -10,7 +12,10 @@ Generates a String representation of a Barcode (code 128)
     {
     //Call barcode.make with desired string to codify
       String bars = barcode.make(text);
-      
+      // Input -> 11648
+      // Output -> "211412123221123221223112221231311222132212233111"
+      // Each number is a bar length, alternating Black / White
+      
       //Goes through retrieved string, drawing the bars
       for (int i = 0; i < bars.length(); i++){
           int barLen = bars[i] - '0';
