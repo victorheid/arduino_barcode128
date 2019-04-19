@@ -163,7 +163,7 @@ String Barcode::make(String code)
     checkSum += 103;
     checkSum = checkSum % 103;
 
-    return values_table[103][1] + barcode + values_table[checkSum][1] + values_table[106][1];
+    return values_table[103][1] + barcode + values_table[checkSum][1] + values_table[108][1];
 }
 
 
